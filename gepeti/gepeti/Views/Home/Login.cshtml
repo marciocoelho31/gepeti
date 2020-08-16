@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Gepeti - Login no Sistema</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .bg {
+            background-image: url("/images/bg.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div class="container">
+        <div>
+            <img src="~/images/logo-gepeti.png"  />                             @*width="300"  para celular *@
+            <form action="/" method="post" style="margin-top: 30px;">           @*font-size: small;*@
+                <div class="box">
+                    Login: <input type="text" name="gplogin" value="" size="10" autofocus />
+                    &nbsp;&nbsp;&nbsp;
+                    Senha: <input type="password" name="gpsenha" value="" size="8" />
+                </div>
+                <div class="box" style="margin-top: 30px;">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

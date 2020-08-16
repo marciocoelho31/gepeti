@@ -34,5 +34,10 @@ namespace gepeti.Controllers
             return View(homeViewModel);
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+
     }
 }
