@@ -43,7 +43,7 @@
     <div class="container">
         <div>
             <img src="~/images/logo-gepeti.png"  />                             @*width="300"  para celular *@
-            <form action="/" method="post" style="margin-top: 30px;">           @*font-size: small;*@
+            <form asp-action="GPTEfetuarLogin" method="post" style="margin-top: 30px;">           @*font-size: small;*@
                 <div class="box">
                     Login: <input type="text" name="gplogin" value="" size="10" autofocus />
                     &nbsp;&nbsp;&nbsp;
@@ -51,7 +51,7 @@
                 </div>
                 <div class="box" style="margin-top: 30px;">
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary">Entrar</button>
+                        <input class="btn btn-primary" type="submit" value="Entrar" />
                     </div>
                 </div>
             </form>

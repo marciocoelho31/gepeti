@@ -39,5 +39,13 @@ namespace gepeti.Controllers
             return View();
         }
 
+        public IActionResult GPTEfetuarLogin()
+        {
+
+            // tratar login            
+
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }
