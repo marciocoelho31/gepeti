@@ -1,2 +1,2 @@
 # gepeti
-Website MVC para gerenciamento de pequenas empresas de TI
+Website MVC para gerenciamento de pequenas empresas de TI (em desenvolvimento)
