@@ -5,11 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using gepeti.Models;
-using gepeti.ViewModels;
-using gepeti.Repositories;
+using gpti.Models;
+using gpti.ViewModels;
+using gpti.Repositories;
 
-namespace gepeti.Controllers
+namespace gpti.Controllers
 {
     public class HomeController : Controller
     {

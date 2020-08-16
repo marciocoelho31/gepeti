@@ -6928,9 +6928,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\developer\\gepeti\\gepeti\\gepeti\\gepeti.csproj",
-      "projectName": "gepeti",
-      "projectPath": "C:\\developer\\gepeti\\gepeti\\gepeti\\gepeti.csproj",
+      "projectUniqueName": "C:\\developer\\gepeti\\gepeti\\gepeti\\gpti.csproj",
+      "projectName": "gpti",
+      "projectPath": "C:\\developer\\gepeti\\gepeti\\gepeti\\gpti.csproj",
       "packagesPath": "C:\\Users\\marcio\\.nuget\\packages\\",
       "outputPath": "C:\\developer\\gepeti\\gepeti\\gepeti\\obj\\",
       "projectStyle": "PackageReference",

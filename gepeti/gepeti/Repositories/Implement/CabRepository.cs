@@ -1,12 +1,12 @@
-﻿using gepeti.Context;
-using gepeti.Models;
+﻿using gpti.Context;
+using gpti.Models;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace gepeti.Repositories
+namespace gpti.Repositories
 {
     public class CabRepository : ICabRepository
     {

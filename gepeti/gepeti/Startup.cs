@@ -9,11 +9,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using gepeti.Models;
-using gepeti.Context;
-using gepeti.Repositories;
+using gpti.Models;
+using gpti.Context;
+using gpti.Repositories;
 
-namespace gepeti
+namespace gpti
 {
     public class Startup
     {

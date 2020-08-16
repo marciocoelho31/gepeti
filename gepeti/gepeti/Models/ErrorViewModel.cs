@@ -1,6 +1,6 @@
 using System;
 
-namespace gepeti.Models
+namespace gpti.Models
 {
     public class ErrorViewModel
     {

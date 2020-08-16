@@ -1,7 +1,7 @@
-﻿using gepeti.Models;
+﻿using gpti.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace gepeti.Context
+namespace gpti.Context
 {
 
     public class AppDbContext : DbContext

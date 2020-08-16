@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using gepeti.Models;
+using gpti.Models;
 
-namespace gepeti.ViewModels
+namespace gpti.ViewModels
 {
     public class HomeViewModel
     {

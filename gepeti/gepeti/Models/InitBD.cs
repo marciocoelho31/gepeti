@@ -1,10 +1,10 @@
-﻿using gepeti.Context;
+﻿using gpti.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace gepeti.Models
+namespace gpti.Models
 {
     public class InitBD
     {
