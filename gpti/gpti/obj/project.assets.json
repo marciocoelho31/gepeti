@@ -6928,11 +6928,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\developer\\gepeti\\gepeti\\gepeti\\gpti.csproj",
+      "projectUniqueName": "C:\\Developer\\gpti\\gpti\\gpti\\gpti.csproj",
       "projectName": "gpti",
-      "projectPath": "C:\\developer\\gepeti\\gepeti\\gepeti\\gpti.csproj",
+      "projectPath": "C:\\Developer\\gpti\\gpti\\gpti\\gpti.csproj",
       "packagesPath": "C:\\Users\\marcio\\.nuget\\packages\\",
-      "outputPath": "C:\\developer\\gepeti\\gepeti\\gepeti\\obj\\",
+      "outputPath": "C:\\Developer\\gpti\\gpti\\gpti\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
