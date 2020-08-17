@@ -1,17 +1,27 @@
 ﻿@model gpti.ViewModels.HomeViewModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicial";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bem vindo!</h1>
+<head>
+    <style>
+        .centraliza {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
 
-    <h3>
-        @Model.Empresa
-    </h3>
+<div class="centraliza">
+    <h1 class="display-4">Seja bem vindo ao sistema GPti.</h1>
 
-    <h5>
-        @Model.DadosContato  
-    </h5>
+    @*<h3>
+            @Model.Empresa
+        </h3>
+
+        <h5>
+            @Model.DadosContato
+        </h5>*@
 
 </div>
