@@ -30,10 +30,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Início <span class="sr-only">(atual)</span></a></li>
-                        <li><a href="#">Agenda</a></li>
-                        <li><a href="#">Chamados</a></li>
-                        <li><a href="#">Clientes</a></li>
-                        <li><a href="#">Contatos</a></li>
+                        <li><a asp-controller="Agenda" asp-action="Index">Agenda</a></li>
+                        <li><a asp-controller="Pendencias" asp-action="Index">Chamados</a></li>
+                        <li><a asp-controller="Clientes" asp-action="Index">Clientes</a></li>
+                        <li><a asp-controller="RCP" asp-action="Index">Contatos</a></li>
                     </ul>
                     @*<form class="navbar-form navbar-left">
                         <div class="form-group">

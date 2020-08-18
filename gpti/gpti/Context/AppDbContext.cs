@@ -11,6 +11,10 @@ namespace gpti.Context
         }
 
         public DbSet<Cab> cab { get; set; }
+        public DbSet<Agenda> agenda { get; set; }
+        public DbSet<Pendencias> pendencias { get; set; }
+        public DbSet<gpti.Models.RCP> RCP { get; set; }
+        public DbSet<gpti.Models.Clientes> Clientes { get; set; }
 
     }
 }

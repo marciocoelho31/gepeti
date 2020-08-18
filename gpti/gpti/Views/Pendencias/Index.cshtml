@@ -1,0 +1,167 @@
+﻿@model IEnumerable<gpti.Models.Pendencias>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Prior)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataSolic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Posicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataPos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoraPos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuemSolic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormaSolic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComentInt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sistema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Previsao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Minutos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QtdDias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DtLanc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NovoItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Urgente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NaWeb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Projeto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoOrig)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prior)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataSolic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Posicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoraPos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuemSolic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormaSolic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComentInt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sistema)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Previsao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Minutos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdDias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DtLanc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prog)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NovoItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Urgente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NaWeb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Projeto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoOrig)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

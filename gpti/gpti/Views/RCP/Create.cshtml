@@ -1,0 +1,80 @@
+﻿@model gpti.Models.RCP
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>RCP</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hora" class="control-label"></label>
+                <input asp-for="Hora" class="form-control" />
+                <span asp-validation-for="Hora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContInt" class="control-label"></label>
+                <input asp-for="ContInt" class="form-control" />
+                <span asp-validation-for="ContInt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContExt" class="control-label"></label>
+                <input asp-for="ContExt" class="form-control" />
+                <span asp-validation-for="ContExt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Local" class="control-label"></label>
+                <input asp-for="Local" class="form-control" />
+                <span asp-validation-for="Local" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelCont" class="control-label"></label>
+                <input asp-for="TelCont" class="form-control" />
+                <span asp-validation-for="TelCont" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Posicao" class="control-label"></label>
+                <input asp-for="Posicao" class="form-control" />
+                <span asp-validation-for="Posicao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label"></label>
+                <input asp-for="Tipo" class="form-control" />
+                <span asp-validation-for="Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ct" class="control-label"></label>
+                <input asp-for="Ct" class="form-control" />
+                <span asp-validation-for="Ct" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Origem" class="control-label"></label>
+                <input asp-for="Origem" class="form-control" />
+                <span asp-validation-for="Origem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
