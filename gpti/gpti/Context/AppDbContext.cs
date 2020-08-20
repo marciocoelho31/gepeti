@@ -7,6 +7,7 @@ namespace gpti.Context
 {
 
     //public class AppDbContext : DbContext
+    [System.Data.Entity.DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class AppDbContext : IdentityDbContext<IdentityUser>     /* dessa forma ele cria no banco de dados as tabelas referentes a autenticacao */
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

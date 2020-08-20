@@ -54,14 +54,6 @@
               "target": "Package",
               "version": "[3.1.7, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.6, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -71,6 +63,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "MySQL.Data.Entities": {
+              "target": "Package",
+              "version": "[6.8.3, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

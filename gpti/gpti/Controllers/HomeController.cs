@@ -31,7 +31,7 @@ namespace gpti.Controllers
                 DadosContato = cab.DadosContato
             };
 
-            return View(homeViewModel);
+            return View("Login", homeViewModel);
         }
 
         public IActionResult Login()
@@ -39,12 +39,18 @@ namespace gpti.Controllers
             return View();
         }
 
-        public IActionResult GPTEfetuarLogin()
+        [HttpPost]
+        public IActionResult GPTI()
         {
+            Cab cab = _cabRepository.LerDadosEmpresa();
 
-            // tratar login            
-
-            return RedirectToAction("Index", "Home");
+            var homeViewModel = new HomeViewModel
+            {
+                Empresa = cab.Empresa,
+                DadosContato = cab.DadosContato
+            };
+            
+            return View("Index", homeViewModel);
         }
 
     }

@@ -2,26 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject></StartupObject>
+    <StartupObject>gpti.Program</StartupObject>
     <OutputType>WinExe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Migrations\20200820022249_CriacaoInicialBanco.cs" />
     <Compile Remove="Migrations\20200820022249_CriacaoInicialBanco.Designer.cs" />
+    <Compile Remove="Migrations\20200820173416_CriacaoBancoMySQLCorrecaoAspNetRoles.cs" />
+    <Compile Remove="Migrations\20200820173416_CriacaoBancoMySQLCorrecaoAspNetRoles.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="MySQL.Data.Entities" Version="6.8.3" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
   </ItemGroup>
