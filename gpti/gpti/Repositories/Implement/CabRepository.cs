@@ -19,7 +19,7 @@ namespace gpti.Repositories
 
         public Cab LerDadosEmpresa()
         {
-            return _context.cab.FirstOrDefault();
+            return _context.Cab.FirstOrDefault();
         }
 
     }

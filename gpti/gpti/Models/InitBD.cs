@@ -12,7 +12,7 @@ namespace gpti.Models
         {
             context.Database.EnsureCreated();
 
-            if (context.cab.Any())
+            if (context.Cab.Any())
             {
                 return;   //O BD foi alimentado
             }

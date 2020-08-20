@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using gpti.Models;
 using gpti.Context;
 using gpti.Repositories;
+using Microsoft.AspNetCore.Identity;
 
 namespace gpti
 {
@@ -31,6 +32,11 @@ namespace gpti
             services.AddDbContext<AppDbContext>(options =>
                 options.UseMySql(connection)
             );
+
+            // por causa da autenticação - sistema de identity padrão:
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddTransient<ICabRepository, CabRepository>();
 

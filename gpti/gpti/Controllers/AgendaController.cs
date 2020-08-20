@@ -22,7 +22,7 @@ namespace gpti.Controllers
         // GET: Agenda
         public async Task<IActionResult> Index()
         {
-            return View(await _context.agenda.ToListAsync());
+            return View(await _context.Agenda.ToListAsync());
         }
 
         // GET: Agenda/Details/5
@@ -33,7 +33,7 @@ namespace gpti.Controllers
                 return NotFound();
             }
 
-            var agenda = await _context.agenda
+            var agenda = await _context.Agenda
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (agenda == null)
             {
@@ -73,7 +73,7 @@ namespace gpti.Controllers
                 return NotFound();
             }
 
-            var agenda = await _context.agenda.FindAsync(id);
+            var agenda = await _context.Agenda.FindAsync(id);
             if (agenda == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace gpti.Controllers
                 return NotFound();
             }
 
-            var agenda = await _context.agenda
+            var agenda = await _context.Agenda
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (agenda == null)
             {
@@ -139,15 +139,15 @@ namespace gpti.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var agenda = await _context.agenda.FindAsync(id);
-            _context.agenda.Remove(agenda);
+            var agenda = await _context.Agenda.FindAsync(id);
+            _context.Agenda.Remove(agenda);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AgendaExists(int id)
         {
-            return _context.agenda.Any(e => e.Id == id);
+            return _context.Agenda.Any(e => e.Id == id);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace gpti.Controllers
         // GET: Pendencias
         public async Task<IActionResult> Index()
         {
-            return View(await _context.pendencias.ToListAsync());
+            return View(await _context.Pendencias.ToListAsync());
         }
 
         // GET: Pendencias/Details/5
@@ -33,7 +33,7 @@ namespace gpti.Controllers
                 return NotFound();
             }
 
-            var pendencias = await _context.pendencias
+            var pendencias = await _context.Pendencias
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (pendencias == null)
             {
@@ -73,7 +73,7 @@ namespace gpti.Controllers
                 return NotFound();
             }
 
-            var pendencias = await _context.pendencias.FindAsync(id);
+            var pendencias = await _context.Pendencias.FindAsync(id);
             if (pendencias == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace gpti.Controllers
                 return NotFound();
             }
 
-            var pendencias = await _context.pendencias
+            var pendencias = await _context.Pendencias
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (pendencias == null)
             {
@@ -139,15 +139,15 @@ namespace gpti.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var pendencias = await _context.pendencias.FindAsync(id);
-            _context.pendencias.Remove(pendencias);
+            var pendencias = await _context.Pendencias.FindAsync(id);
+            _context.Pendencias.Remove(pendencias);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PendenciasExists(int id)
         {
-            return _context.pendencias.Any(e => e.Id == id);
+            return _context.Pendencias.Any(e => e.Id == id);
         }
     }
 }
