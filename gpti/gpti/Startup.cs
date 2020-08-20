@@ -59,6 +59,8 @@ namespace gpti
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseAuthentication();    // habilitando a autenticação pelo middleware... adiciona um único componente de autenticação ao pipeline da solicitação
+
             app.UseRouting();
 
             app.UseAuthorization();

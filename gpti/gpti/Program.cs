@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using gpti.Extensao;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace gpti
 {
@@ -13,7 +8,10 @@ namespace gpti
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args)
+                .Build()
+                .CreateAdminRole()
+                .Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

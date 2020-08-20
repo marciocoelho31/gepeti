@@ -42,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -64,9 +68,13 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
-            "MySQL.Data.Entities": {
+            "MySQL.Data.Entity": {
               "target": "Package",
-              "version": "[6.8.3, )"
+              "version": "[6.10.9, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.21, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
