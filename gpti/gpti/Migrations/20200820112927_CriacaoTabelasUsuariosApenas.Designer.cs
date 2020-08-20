@@ -9,8 +9,8 @@ using gpti.Context;
 namespace gpti.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200820022249_CriacaoInicialBanco")]
-    partial class CriacaoInicialBanco
+    [Migration("20200820112927_CriacaoTabelasUsuariosApenas")]
+    partial class CriacaoTabelasUsuariosApenas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
