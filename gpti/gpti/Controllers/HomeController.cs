@@ -83,6 +83,7 @@ namespace gpti.Controllers
             return View("Login", loginViewModel);
         }
 
+        [Authorize]
         public IActionResult GPTI()
         {
             Cab cab = _cabRepository.LerDadosEmpresa();

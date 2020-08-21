@@ -61,6 +61,7 @@ namespace gpti.Controllers
             return View(loginViewModel);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Register()
         {
             return View();

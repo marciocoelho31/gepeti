@@ -9,9 +9,10 @@ namespace gpti.ViewModels
     public class LoginViewModel
     {
         [Required]
-        [Display(Name ="Usuário")]
+        [Display(Name = "Usuário")]
         public string UserName { get; set; }
         [Required]
+        [Display(Name = "Senha")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
         public string ReturnUrl { get; set; }
