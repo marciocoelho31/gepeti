@@ -1,4 +1,6 @@
-﻿@{
+﻿@model LoginViewModel
+
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -42,13 +44,19 @@
 <body class="bg">
     <div class="container">
         <div>
-            <img src="~/images/logo-gpti.png"  />   @*width="300"  para celular *@
-            <form asp-action="GPTI" method="post" style="margin-top: 30px;">     @*font-size: small;*@
+            <img src="~/images/logo-gpti.png" />   @*width="300"  para celular *@
+            @*asp-action="GPTI"*@
+            <form asp-controller="Home" asp-action="Login" method="post" class="form-horizontal" role="form" style="margin-top: 30px;">
+                <input type="hidden" asp-for="ReturnUrl" />
                 <div class="box">
-                    Login: <input type="text" name="gplogin" value="" size="10" autofocus />
+                    Login: <input asp-for="UserName" class="form-control" autofocus />
                     &nbsp;&nbsp;&nbsp;
-                    Senha: <input type="password" name="gpsenha" value="" size="8" />
+                    Senha: <input asp-for="Password" class="form-control" />
                 </div>
+                @*                            <span asp-validation-for="UserName" class="text-danger"></span>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                *@
+
                 <div class="box" style="margin-top: 30px;">
                     <div class="form-group">
                         <input class="btn btn-primary" type="submit" value="Entrar" />
