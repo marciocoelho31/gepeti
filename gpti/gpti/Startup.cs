@@ -38,6 +38,9 @@ namespace gpti
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+            // acesso negado a area de admin
+            services.ConfigureApplicationCookie(options => options.AccessDeniedPath = "/Home/AccessDenied");
+
             services.AddTransient<ICabRepository, CabRepository>();
 
             services.AddControllersWithViews();

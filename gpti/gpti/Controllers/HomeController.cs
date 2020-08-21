@@ -17,11 +17,9 @@ namespace gpti.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
-
         private readonly ICabRepository _cabRepository;
 
-        public HomeController(ICabRepository cabRepository, UserManager<IdentityUser> userManager, 
-            SignInManager<IdentityUser> signInManager)
+        public HomeController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, ICabRepository cabRepository)
         {
             _cabRepository = cabRepository;
             _userManager = userManager;
@@ -48,6 +46,7 @@ namespace gpti.Controllers
                 return View(loginViewModel);
             }
 
+            // se eu entro na pagina de login com o mesmo username, ele trava no botao Entrar
             var user = await _userManager.FindByNameAsync(loginViewModel.UserName);
 
             if (user != null)
@@ -64,13 +63,13 @@ namespace gpti.Controllers
                             Empresa = cab.Empresa,
                             DadosContato = cab.DadosContato
                         };
-                        return View("Index", homeViewModel);
+                        return RedirectToAction("GPTI", "Home");
                     }
                     return RedirectToAction(loginViewModel.ReturnUrl);
                 }
             }
 
-            ModelState.AddModelError("", "Usuário/senha inválidos ou não localizados");
+            ModelState.AddModelError("CustomError", "Usuário/senha inválidos ou não localizados");
             return View(loginViewModel);
         }
 
@@ -84,19 +83,18 @@ namespace gpti.Controllers
             return View("Login", loginViewModel);
         }
 
-        //[HttpPost]
-        //public IActionResult GPTI()
-        //{
-        //    Cab cab = _cabRepository.LerDadosEmpresa();
+        public IActionResult GPTI()
+        {
+            Cab cab = _cabRepository.LerDadosEmpresa();
 
-        //    var homeViewModel = new HomeViewModel
-        //    {
-        //        Empresa = cab.Empresa,
-        //        DadosContato = cab.DadosContato
-        //    };
+            var homeViewModel = new HomeViewModel
+            {
+                Empresa = cab.Empresa,
+                DadosContato = cab.DadosContato
+            };
 
-        //    return View("Index", homeViewModel);
-        //}
+            return View("Index", homeViewModel);
+        }
 
     }
 }

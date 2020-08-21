@@ -43,22 +43,26 @@
 </head>
 <body class="bg">
     <div class="container">
-        <div>
+        <div align="center">
             <img src="~/images/logo-gpti.png" />   @*width="300"  para celular *@
             @*asp-action="GPTI"*@
             <form asp-controller="Home" asp-action="Login" method="post" class="form-horizontal" role="form" style="margin-top: 30px;">
                 <input type="hidden" asp-for="ReturnUrl" />
-                <div class="box">
-                    Login: <input asp-for="UserName" class="form-control" autofocus />
-                    &nbsp;&nbsp;&nbsp;
-                    Senha: <input asp-for="Password" class="form-control" />
+                <div class="row">
+                    <div class="col-sm-6">
+                        Login:<br /><input asp-for="UserName" class="form-control" autofocus />
+                    </div>
+                    <div class="col-sm-6 float-right">
+                        Senha:<br /><input asp-for="Password" class="form-control" />
+                    </div>
                 </div>
-                @*                            <span asp-validation-for="UserName" class="text-danger"></span>
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                *@
-
-                <div class="box" style="margin-top: 30px;">
-                    <div class="form-group">
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12" style="color: red; font-weight:bold;">
+                        @Html.ValidationMessage("CustomError")
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12">
                         <input class="btn btn-primary" type="submit" value="Entrar" />
                     </div>
                 </div>
