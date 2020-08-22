@@ -26,7 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" asp-controller="Home" asp-action="GPTI">
                         <img src="~/images/logo-gpti-icon.png" height="25" />
                     </a>
                 </div>
@@ -34,7 +34,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Início <span class="sr-only">(atual)</span></a></li>
+                        <li class="active"><a asp-controller="Home" asp-action="GPTI">Início <span class="sr-only">(atual)</span></a></li>
                         <li><a asp-controller="Agenda" asp-action="Index">Agenda</a></li>
                         <li><a asp-controller="Pendencias" asp-action="Index">Chamados</a></li>
                         <li><a asp-controller="Clientes" asp-action="Index">Clientes</a></li>
