@@ -22,7 +22,7 @@ namespace gpti.Controllers
         // GET: Pendencias
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Pendencias.ToListAsync());
+            return View(await _context.Pendencias.OrderByDescending(x => x.DataSolic).ToListAsync());
         }
 
         // GET: Pendencias/Details/5

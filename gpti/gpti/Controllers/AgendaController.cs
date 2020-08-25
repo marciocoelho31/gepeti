@@ -22,7 +22,7 @@ namespace gpti.Controllers
         // GET: Agenda
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Agenda.ToListAsync());
+            return View(await _context.Agenda.OrderByDescending(x => x.Data).ToListAsync());
         }
 
         // GET: Agenda/Details/5

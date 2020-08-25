@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace gpti.Models
 {
@@ -6,10 +7,15 @@ namespace gpti.Models
     public class Pendencias
     {
         public int Id { get; set; }
+        [Display(Name = "Prioridade")]
         public int? Prior { get; set; }
         public string Tipo { get; set; }
+        [Display(Name = "Cliente")]
         public string Cliente { get; set; }
+        [Display(Name = "Descrição do chamado")]
         public string Descricao { get; set; }
+        [Display(Name = "Solicitado em")]
+        [DisplayFormat(DataFormatString = "{0:d}")]
         public DateTime? DataSolic { get; set; }
         public string Posicao { get; set; }
         public DateTime? DataPos { get; set; }
@@ -17,6 +23,7 @@ namespace gpti.Models
         public string QuemSolic { get; set; }
         public string FormaSolic { get; set; }
         public string ComentInt { get; set; }
+        [Display(Name = "Sistema")]
         public string Sistema { get; set; }
         public string Usuario { get; set; }
         public DateTime? Previsao { get; set; }

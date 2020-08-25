@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace gpti.Models
 {
@@ -6,18 +7,22 @@ namespace gpti.Models
     public class Clientes
     {
         public int Id { get; set; }
+        [Display(Name = "Nome")]
         public string Nome { get; set; }
         public string Razao { get; set; }
         public string Endereco { get; set; }
         public string Cep { get; set; }
         public string Bairro { get; set; }
+        [Display(Name = "Cidade")]
         public string Cidade { get; set; }
+        [Display(Name = "Estado")]
         public string Estado { get; set; }
         public double Valor { get; set; }
         public DateTime? Vencimento { get; set; }
         public double? Multa { get; set; }
         public string CGC { get; set; }
         public string Inscricao { get; set; }
+        [Display(Name = "Telefone")]
         public string Telefone { get; set; }
         public string Contato { get; set; }
         public string Cobranca { get; set; }
@@ -31,9 +36,11 @@ namespace gpti.Models
         public double? UltBol { get; set; }
         public string Obs { get; set; }
         public string FormaPg { get; set; }
+        [Display(Name = "E-mail")]
         public string E_mail { get; set; }
         public string Homepage { get; set; }
         public string Corresp { get; set; }
+        [Display(Name = "Sistema")]
         public string Sistema { get; set; }
         public string Versao { get; set; }
         public double? Parcelas { get; set; }
@@ -44,8 +51,10 @@ namespace gpti.Models
         public double? Tempo { get; set; }
         public double? ValorTotal { get; set; }
         public double? DescFat { get; set; }
+        [Display(Name = "Login")]
         public string Login { get; set; }
         public string Senha { get; set; }
+        [Display(Name = "Autorizado?")]
         public string Autorizado { get; set; }
         public string Mensagem_No_Site { get; set; }
         public string PastaServer { get; set; }
@@ -64,6 +73,8 @@ namespace gpti.Models
         public int? QtMaqMovel { get; set; }
         public DateTime? DtRescisao { get; set; }
         public DateTime? DtAudVal { get; set; }
+        [Display(Name = "Últ.Acesso")]
+        [DisplayFormat(DataFormatString = "{0:d}")]
         public DateTime? DtUltAcesso { get; set; }
         public DateTime? DtEmiBol { get; set; }
         public string NumBoleto { get; set; }

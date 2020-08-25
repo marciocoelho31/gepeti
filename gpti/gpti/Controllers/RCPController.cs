@@ -22,7 +22,7 @@ namespace gpti.Controllers
         // GET: RCPs
         public async Task<IActionResult> Index()
         {
-            return View(await _context.RCP.ToListAsync());
+            return View(await _context.RCP.OrderByDescending(x => x.Data).ToListAsync());
         }
 
         // GET: RCPs/Details/5

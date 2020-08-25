@@ -2,514 +2,107 @@
 
 @{
     ViewData["Title"] = "Index";
+    double ct = 0;
 }
 
-<h1>Index</h1>
+<style>
+    .container div .texto {
+        font-size: 0.9em;
+    }
+</style>
+
+<h3>Clientes</h3>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Incluir</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Razao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Endereco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cep)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bairro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Valor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vencimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Multa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CGC)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inscricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contato)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cobranca)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Dolar)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.VendaAlugu)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Salario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IniContrat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IniManut)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Mensagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CodMem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UltBol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Obs)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FormaPg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.E_mail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Homepage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Corresp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sistema)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Versao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Parcelas)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValPar)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DtInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Receita)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Custo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tempo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValorTotal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescFat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Login)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Senha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Autorizado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Mensagem_No_Site)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PastaServer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PastaClient)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PercSobreSalario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataTravaSistema)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiasARenovar)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BancoCobr)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Opcao_NO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.mysql_ip)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.mysql_nomebd)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.mysql_user)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.mysql_pwd)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtMaq)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtMaqDesktop)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtMaqMovel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DtRescisao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DtAudVal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DtUltAcesso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DtEmiBol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumBoleto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CorrecaoDiariaAtraso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HrEmiBol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LoginEmiBol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeEmissorBol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtMaquinasReg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PercSalAdMaq)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CritMensalid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MesAtraso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValorAnterior)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValMensMob)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtUsuariosMob)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValMensSiteOnl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiaSemanaBkp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataUltBkp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraUltBkp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.E_mail2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.E_mail3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MostraAnuncios)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Senha_A)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PercDesconto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Razao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cep)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bairro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Vencimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Multa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CGC)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inscricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contato)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cobranca)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dolar)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VendaAlugu)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IniContrat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IniManut)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mensagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodMem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UltBol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Obs)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FormaPg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.E_mail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Homepage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Corresp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sistema)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Versao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Parcelas)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValPar)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DtInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Receita)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Custo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tempo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValorTotal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DescFat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Login)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Senha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Autorizado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mensagem_No_Site)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PastaServer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PastaClient)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PercSobreSalario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataTravaSistema)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiasARenovar)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BancoCobr)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Opcao_NO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.mysql_ip)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.mysql_nomebd)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.mysql_user)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.mysql_pwd)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtMaq)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtMaqDesktop)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtMaqMovel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DtRescisao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DtAudVal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DtUltAcesso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DtEmiBol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumBoleto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CorrecaoDiariaAtraso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HrEmiBol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoginEmiBol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeEmissorBol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtMaquinasReg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PercSalAdMaq)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CritMensalid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MesAtraso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValorAnterior)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValMensMob)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtUsuariosMob)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValMensSiteOnl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiaSemanaBkp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataUltBkp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraUltBkp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.E_mail2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.E_mail3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MostraAnuncios)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Senha_A)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PercDesconto)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+<div class="row">
+    <div class="col-xs-2 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Nome)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Estado)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </strong>
+    </div>
+    <div class="col-xs-2 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.E_mail)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Sistema)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Login)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Autorizado)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.DtUltAcesso)
+        </strong>
+    </div>
+    <div class="col-xs-1">
+        &nbsp;
+    </div>
+</div>
+
+@foreach (var item in Model)
+{
+    ct++;
+    string estilo_linha = (ct % 2 != 0 ? "background-color:#F5F5F5;" : "");
+<div class="row" style=@estilo_linha>
+    <div class="col-xs-2 texto">
+        @Html.DisplayFor(modelItem => item.Nome)
+    </div>
+    <div class="col-xs-1 texto">
+        @Html.DisplayFor(modelItem => item.Cidade)
+    </div>
+    <div class="col-xs-1 texto">
+        @Html.DisplayFor(modelItem => item.Estado)
+    </div>
+    <div class="col-xs-1 texto">
+        @Html.DisplayFor(modelItem => item.Telefone)
+    </div>
+    <div class="col-xs-2 texto">
+        @Html.DisplayFor(modelItem => item.E_mail)
+    </div>
+    <div class="col-xs-1 texto">
+        @Html.DisplayFor(modelItem => item.Sistema)
+    </div>
+    <div class="col-xs-1 texto">
+        @Html.DisplayFor(modelItem => item.Login)
+    </div>
+    <div class="col-xs-1 texto">
+        @Html.DisplayFor(modelItem => item.Autorizado)
+    </div>
+    <div class="col-xs-1 texto">
+        @Html.DisplayFor(modelItem => item.DtUltAcesso)
+    </div>
+    <div class="col-xs-1">
+        <a asp-action="Edit" asp-route-id="@item.Id"><span style="font-size: 1.2em; color: darkgreen;"><i class="fas fa-edit"></i></span></a>
+        <a asp-action="Details" asp-route-id="@item.Id"><span style="font-size: 1.2em; color: Dodgerblue;"><i class="fas fa-search"></i></span></a>
+        <a asp-action="Delete" asp-route-id="@item.Id"><span style="font-size: 1.2em; color: red;"><i class="fas fa-trash-alt"></i></span></a>
+    </div>
+</div>
 }
-    </tbody>
-</table>

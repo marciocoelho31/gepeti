@@ -44,6 +44,14 @@ namespace gpti
             services.AddTransient<ICabRepository, CabRepository>();
 
             services.AddControllersWithViews();
+
+            // configuracao do serviço de paginação (lanches e pedidos)
+            //services.AddPaging(options =>
+            //{
+            //    options.ViewName = "Bootstrap4";
+            //    options.PageParameterName = "pageindex";
+            //});
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

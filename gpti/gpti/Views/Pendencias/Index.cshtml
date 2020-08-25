@@ -2,166 +2,67 @@
 
 @{
     ViewData["Title"] = "Index";
+    double ct = 0;
 }
 
-<h1>Index</h1>
+<style>
+    .container div .texto {
+        font-size: 0.9em;
+    }
+</style>
+
+<h3>Chamados</h3>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Incluir</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Prior)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tipo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataSolic)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Posicao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataPos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraPos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QuemSolic)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FormaSolic)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ComentInt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sistema)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Usuario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Previsao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Minutos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtdDias)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DtLanc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Prog)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NovoItem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Urgente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NaWeb)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Projeto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescricaoOrig)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Prior)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataSolic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Posicao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataPos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraPos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuemSolic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FormaSolic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ComentInt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sistema)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Previsao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Minutos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtdDias)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DtLanc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Prog)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NovoItem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Urgente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NaWeb)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Projeto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DescricaoOrig)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+<div class="row">
+    <div class="col-xs-3 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </strong>
+    </div>
+    <div class="col-xs-5 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </strong>
+    </div>
+    <div class="col-xs-2 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.DataSolic)
+        </strong>
+    </div>
+    <div class="col-xs-1 texto">
+        <strong>
+            @Html.DisplayNameFor(model => model.Sistema)
+        </strong>
+    </div>
+    <div class="col-xs-1">
+        &nbsp;
+    </div>
+</div>
+
+@foreach (var item in Model)
+{
+    ct++;
+    string estilo_linha = (ct % 2 != 0 ? "background-color:#F5F5F5;" : "");
+    <div class="row" style=@estilo_linha>
+        <div class="col-xs-3 texto">
+            @Html.DisplayFor(modelItem => item.Cliente)
+        </div>
+        <div class="col-xs-5 texto">
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </div>
+        <div class="col-xs-2 texto">
+            @Html.DisplayFor(modelItem => item.DataSolic)
+        </div>
+        <div class="col-xs-1 texto">
+            @Html.DisplayFor(modelItem => item.Sistema)
+        </div>
+        <div class="col-xs-1">
+            <a asp-action="Edit" asp-route-id="@item.Id"><span style="font-size: 1.2em; color: darkgreen;"><i class="fas fa-edit"></i></span></a>
+            <a asp-action="Details" asp-route-id="@item.Id"><span style="font-size: 1.2em; color: Dodgerblue;"><i class="fas fa-search"></i></span></a>
+            <a asp-action="Delete" asp-route-id="@item.Id"><span style="font-size: 1.2em; color: red;"><i class="fas fa-trash-alt"></i></span></a>
+        </div>
+    </div>
 }
-    </tbody>
-</table>
